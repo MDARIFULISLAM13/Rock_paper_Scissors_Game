@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: center;
   
 }
 h1{
@@ -35,4 +36,25 @@ img{
    
     cursor:pointer;
     background-color:black;
+}
+.score-board{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 2rem;
+ gap: 4rem;
+}
+#user,#Computer{
+    font-size: 4rem;
+}
+.msg-container{
+    margin-top: 3rem;
+}
+#msg{
+    background-color: #0b233e;
+    color: rgb(236, 234, 232);
+    font-size: 2rem;
+    display: inline;
+    padding:1rem ;
+    border-radius:1rem;
 }
