@@ -11,6 +11,10 @@ h1{
     height: 5rem;
     line-height: 5rem;
 }
+h2{
+    margin-top: 3rem;
+    font-size: 4rem;
+}
 .choice{
     height: 200px;
     width: 200px;
@@ -30,7 +34,7 @@ img{
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin: 10rem;
+    margin: 4rem;
 }
 .choice:hover{
    
@@ -57,4 +61,10 @@ img{
     display: inline;
     padding:1rem ;
     border-radius:1rem;
+}
+
+#fun{
+border-radius: 25%;
+margin-top: 4rem;
+visibility:hidden;
 }

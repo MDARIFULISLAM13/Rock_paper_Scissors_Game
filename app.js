@@ -8,6 +8,7 @@ choises.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userchoice = choice.getAttribute("id");
        
+  
         play(userchoice);
     })
 });
@@ -26,7 +27,8 @@ const gencompchoice = () => {
 const finalresulr = (compchoice, userchoice) => {
     console.log(userchoice, "  ", compchoice);
     if (userchoice === compchoice) {
-        msg.innerText = "Game Draw.Play Again";
+        msg.innerText = "Game Draw.Play Again.\n\nYou-> " + userchoice+"...Compture-> "+compchoice;
+      
       
     }
     else {
@@ -49,12 +51,15 @@ const finalresulr = (compchoice, userchoice) => {
          if (win) {
           
              userscore++;
-               msg.innerText = "You Win This Round!";
+             msg.innerText = "You Win This Round!.\n\nYou-> " + userchoice+"...Compture-> "+compchoice;
+             Animationwin();
         }
         else {
 
              compscore++;
-               msg.innerText = "You lose This Round!";
+             msg.innerText = "You lose This Round!.\n\nYou-> " + userchoice+"...Compture->" +compchoice;
+             Animationlose();
+
         }
        
     }
@@ -69,5 +74,22 @@ updatescore = (userscore,compscore) => {
     precomp.innerText = compscore;
 
 
+
+}
+const Animationwin = () => {
+      confetti({
+        particleCount: 800,
+        spread: 100,
+        origin: { y: .6 },
+       
+    });
+}
+const Animationlose = () => {
+
+document.querySelector("#fun").style.visibility = 'visible';
+
+    setTimeout(function() {
+     document.querySelector("#fun").style.visibility = 'hidden';
+    }, 500);
 
 }
